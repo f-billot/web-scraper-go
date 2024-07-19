@@ -10,8 +10,8 @@ services:
     image: dpage/pgadmin4:8.9
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.org
-      PGADMIN_DEFAULT_PASSWORD: admin      
+      PGADMIN_DEFAULT_EMAIL: florian.billot@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: pgadminPassword      
       PGADMIN_CONFIG_WTF_CSRF_HEADERS: '["Referer", "Origin"]'
       PGADMIN_CONFIG_WTF_CSRF_ENABLED: 'False'
     volumes:
@@ -26,7 +26,7 @@ services:
     restart: always          
     environment: 
       POSTGRES_USER: webscraper
-      POSTGRES_PASSWORD: webscraper
+      POSTGRES_PASSWORD: webscraper!
       POSTGRES_DB: webscraper
     volumes:                 
       - pg-data:/var/lib/postgresql/data
